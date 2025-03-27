@@ -34,7 +34,7 @@ cd user_management
 # Make executable and run
 chmod +x user_management.sh
 sudo ./user_management.sh
-```
+
 
 ## 📖 Documentation
 
