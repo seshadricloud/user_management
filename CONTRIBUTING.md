@@ -1,6 +1,3 @@
-Ah, I see the issue! The Mermaid diagram syntax needs to be properly enclosed for GitHub Markdown. Here's the corrected **README.md** with proper diagram formatting:
-
-```markdown
 # Linux User Management Script 🔐
 
 ![Bash](https://img.shields.io/badge/-Bash-4EAA25?logo=gnubash&logoColor=white)
@@ -26,7 +23,6 @@ flowchart TD
     A --> C[Security Actions]
     B --> D[Set Password]
     C --> E[Lock/Unlock]
-```
 
 ## 🚀 Quick Start
 
