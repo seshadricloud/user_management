@@ -1,89 +1,100 @@
-# Contributing to Linux User Management Script
+# Contributing to Advanced User Management Script
 
-Thank you for considering contributing to this project! We welcome all forms of contributions, from bug reports to feature implementations.
+We welcome contributions from the community! Here's how you can help improve this project.
 
-## 🛠 How to Contribute
+## 📋 Contribution Guidelines
 
-### 1. Reporting Issues
-- Check existing issues to avoid duplicates
-- Use the issue template and include:
-  markdown
-  ### Description
-  ### Steps to Reproduce
-  ### Expected Behavior
-  ### Actual Behavior
-  ### System Information
-  ```
+### 🐛 Reporting Bugs
+1. Check existing issues to avoid duplicates
+2. Use this bug report format:
+markdown
+**Description**:  
+**Steps to Reproduce**:  
+**Expected Behavior**:  
+**Actual Behavior**:  
+**Environment**:  
+- OS: [e.g., Ubuntu 22.04]
+- Bash Version: [e.g., 5.1.16]
 
-### 2. Feature Requests
-- Open an issue with `[Feature]` prefix
-- Describe the use case and proposed solution
+### 💡 Feature Requests
+1. Start with `[Feature]` in issue title
+2. Describe:
+   - Use case
+   - Proposed implementation
+   - Potential impact
 
-### 3. Code Contributions
-#### Prerequisites
-- Bash 4.0+
-- Linux environment (Ubuntu/CentOS recommended)
-- Git installed
-
-#### Setup Guide
+### 🛠 Development Setup
 bash
-# Fork and clone the repo
+# Fork and clone
 git clone https://github.com/YOUR_USERNAME/user_management.git
 cd user_management
 
-# Create a feature branch
-git checkout -b feature/your-feature
+# Create feature branch
+git checkout -b feature/your-feature-name
 
-
-#### Coding Standards
-- Follow Google Shell Style Guide
+### 🔧 Coding Standards
+- Follow [Google Shell Style Guide](https://google.github.io/styleguide/shellguide.html)
+- Use `shellcheck` for linting
+- Keep functions focused (max 50 lines)
 - Add comments for complex logic
-- Keep functions under 50 lines
-- Use `local` for function variables
 
-#### Testing Requirements
-- Verify changes work on:
-  - Ubuntu 20.04+
-  - CentOS 7+
-- Test edge cases (special chars in usernames, etc.)
-- Update documentation if needed
+### ✅ Testing Requirements
+Test your changes on:
+- Ubuntu 20.04/22.04
+- CentOS 7/8
+- Different permission levels
 
-### 4. Pull Request Process
-1. Ensure your branch is updated with `main`
-2. Include clear description of changes
-3. Reference related issues (e.g., "Fixes #123")
-4. Wait for CI checks to pass
-5. Address review comments if any
+### 📦 Dependency Management
+Ensure these are available:
+- `coreutils` (for basic commands)
+- `passwd` (from shadow-utils)
+- `grep`, `awk`, `sed`
+
+## 🚀 Pull Request Process
+1. Update `CHANGELOG.md` with your changes
+2. Ensure tests pass:
+bash
+# Run basic functionality tests
+./test_script.sh
+3. Include screenshots for UI changes
+4. Reference related issues
+
+## 📊 Test Cases
+We particularly need tests for:
+1. Edge case usernames (special chars, spaces)
+2. Password complexity validation
+3. Group management scenarios
+4. Lock/unlock functionality
+
+Example test format:
+bash
+# Test user creation
+test_create_user() {
+  output=$(./user_management.sh <<< $'1\ntestuser\nP@ssw0rd!\nn\nn\nn')
+  assertContains "$output" "User 'testuser' created"
+}
+
+## 📜 Documentation Standards
+- Update both `README.md` and inline help text
+- Use consistent verb tense
+- Add examples for new features
 
 ## 🏷️ Issue Labels
 | Label | Purpose |
 |-------|---------|
-| `bug` | Unexpected behavior |
-| `enhancement` | Feature improvements |
+| `bug` | Defects or unexpected behavior |
+| `enhancement` | New features or improvements |
 | `security` | Security-related issues |
 | `docs` | Documentation updates |
 
 ## 💬 Communication
-- Use GitHub discussions for questions
+- Use GitHub Discussions for questions
 - Be respectful and professional
-- Allow 2-3 business days for responses
+- Allow 48 hours for maintainer responses
 
-## 🏆 Your First Contribution?
-Try these beginner-friendly issues:
-- Improve help text formatting
-- Add more input validation examples
-- Update documentation typos
+## 🌱 First Time Contributors
+Check out these `good first issue` labeled tasks to start!
 
-We value all contributions, big or small!
+---
 
-
-### Key Features:
-1. **Clear Workflow**: Step-by-step contribution process
-2. **Quality Standards**: Specific coding/testing requirements
-3. **Beginner-Friendly**: Labeled good first issues
-4. **Professional Tone**: Encourages respectful collaboration
-
-### Recommended Files to Add:
-1. `.github/ISSUE_TEMPLATE.md` (for standardized issue reporting)
-2. `.github/PULL_REQUEST_TEMPLATE.md` (for PR consistency)
-3. `TESTING.md` (detailed test cases)
+Thank you for helping make this project better! ✨
