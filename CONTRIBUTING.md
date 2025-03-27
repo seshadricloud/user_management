@@ -17,7 +17,7 @@ Demo: [![Try in Replit](https://img.shields.io/badge/Try_in-Replit-%2346a2f1)](h
 - **SSH Key Configuration**
 - **Detailed Activity Logging**
 
-```mermaid
+mermaid
 flowchart TD
     A[Interactive Menu] --> B[Create User]
     A --> C[Security Actions]
@@ -26,7 +26,7 @@ flowchart TD
 
 ## 🚀 Quick Start
 
-```bash
+bash
 # Clone repository
 git clone https://github.com/seshadricloud/user_management.git
 cd user_management
