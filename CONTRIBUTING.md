@@ -1,3 +1,6 @@
+Ah, I see the issue! The Mermaid diagram syntax needs to be properly enclosed for GitHub Markdown. Here's the corrected **README.md** with proper diagram formatting:
+
+```markdown
 # Linux User Management Script 🔐
 
 ![Bash](https://img.shields.io/badge/-Bash-4EAA25?logo=gnubash&logoColor=white)
@@ -18,14 +21,16 @@ Automate user provisioning, access control, and security compliance on Linux sys
 - **Detailed Activity Logging**
 
 ```mermaid
-graph TD
+flowchart TD
     A[Interactive Menu] --> B[Create User]
     A --> C[Security Actions]
     B --> D[Set Password]
     C --> E[Lock/Unlock]
+```
 
+## 🚀 Quick Start
 
-
+```bash
 # Clone repository
 git clone https://github.com/seshadricloud/user_management.git
 cd user_management
@@ -33,42 +38,36 @@ cd user_management
 # Make executable and run
 chmod +x user_management.sh
 sudo ./user_management.sh
+```
 
+## 📖 Documentation
 
-📖 Documentation
-Usage Examples
-Scenario	Command
-Create developer with sudo	1 → dev → P@ssw0rd! → y → sudo → y → n
-Lock inactive account	5 → olduser
-List all users	3
-Security Features
-🔒 Password complexity validation (12+ chars, mixed case)
+### Usage Examples
+| Scenario | Command |
+|----------|---------|
+| Create developer with sudo | `1 → dev → P@ssw0rd! → y → sudo → y → n` |
+| Lock inactive account | `5 → olduser` |
+| List all users | `3` |
 
-📜 Audit logging to /var/log/user_management.log
+### Security Features
+- 🔒 Password complexity validation (12+ chars, mixed case)
+- 📜 Audit logging to `/var/log/user_management.log`
+- ⏳ Automatic password expiration (90 days)
 
-⏳ Automatic password expiration (90 days)
+## 💼 Professional Use Cases
+- **DevOps Teams**: Automate service account provisioning
+- **Cloud Engineers**: Secure VM access management
+- **SysAdmins**: Replace manual user management workflows
 
-💼 Professional Use Cases
-DevOps Teams: Automate service account provisioning
-
-Cloud Engineers: Secure VM access management
-
-SysAdmins: Replace manual user management workflows
-
-🤝 Contributing
+## 🤝 Contributing
 Found a bug? Want to improve the script?
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/improvement`)
+3. Commit your changes (`git commit -am 'Add new feature'`)
+4. Push to the branch (`git push origin feature/improvement`)
+5. Open a Pull Request
 
-Fork the repository
+## 📜 License
+MIT License - See [LICENSE](LICENSE) for details
 
-Create your feature branch (git checkout -b feature/improvement)
-
-Commit your changes (git commit -am 'Add new feature')
-
-Push to the branch (git push origin feature/improvement)
-
-Open a Pull Request
-
-📜 License
-MIT License - See LICENSE for details
-
-
+---
