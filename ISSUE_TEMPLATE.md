@@ -1,3 +1,5 @@
+
+### 2. ISSUE_TEMPLATE.md
 markdown
 ---
 name: Bug Report
@@ -44,6 +46,5 @@ labels: enhancement
 **Alternatives Considered**
 
 **Additional Context**
+date
 
-
----
