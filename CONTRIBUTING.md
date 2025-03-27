@@ -6,8 +6,8 @@
 
 Automate user provisioning, access control, and security compliance on Linux systems with this powerful Bash script.
 
-**GitHub**: [github.com/seshadricloud/user_management](https://github.com/seshadricloud/user_management)  
-**Demo**: [![Try in Replit](https://img.shields.io/badge/Try_in-Replit-%2346a2f1)](https://replit.com/new/linux)
+GitHub: [github.com/seshadricloud/user_management](https://github.com/seshadricloud/user_management)  
+Demo: [![Try in Replit](https://img.shields.io/badge/Try_in-Replit-%2346a2f1)](https://replit.com/new/linux)
 
 ## 🌟 Features
 
